@@ -269,20 +269,34 @@ function Index() {
 
                   <dl className="mt-6 space-y-4 text-sm">
                     <div>
+                      <dt className="font-semibold text-foreground">Characteristics</dt>
+                      <dd className="text-muted-foreground mt-1">
+                        <ul className="list-disc list-inside space-y-1">
+                          {rice.characteristics.map((c, idx) => (
+                            <li key={idx}>{c}</li>
+                          ))}
+                        </ul>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-foreground">Health Benefits</dt>
+                      <dd className="text-muted-foreground mt-1">
+                        <ul className="list-disc list-inside space-y-1">
+                          {rice.health.map((h, idx) => (
+                            <li key={idx}>{h}</li>
+                          ))}
+                        </ul>
+                      </dd>
+                    </div>
+                    <div>
                       <dt className="font-semibold text-foreground">Uses</dt>
-                      <dd className="text-muted-foreground mt-1">{rice.uses}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-foreground">When to use</dt>
-                      <dd className="text-muted-foreground mt-1">{rice.when}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-foreground">How to use</dt>
-                      <dd className="text-muted-foreground mt-1">{rice.how}</dd>
-                    </div>
-                    <div>
-                      <dt className="font-semibold text-foreground">Who can use</dt>
-                      <dd className="text-muted-foreground mt-1">{rice.who}</dd>
+                      <dd className="text-muted-foreground mt-1">
+                        <ul className="list-disc list-inside space-y-1">
+                          {rice.uses.map((u, idx) => (
+                            <li key={idx}>{u}</li>
+                          ))}
+                        </ul>
+                      </dd>
                     </div>
                   </dl>
 
