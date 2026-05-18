@@ -367,7 +367,7 @@ function Index() {
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-sm">
           <div>
             <div className="flex items-center gap-2 font-serif text-lg font-bold text-primary">
-              <Wheat className="size-5" /> Sahya Heritage Rice
+              <Wheat className="size-5" /> Pure Organic Rice Products
             </div>
             <p className="mt-3 text-muted-foreground">
               Naturally grown traditional rice, delivered with care.
@@ -376,7 +376,7 @@ function Index() {
           <div>
             <p className="font-semibold mb-2">Contact</p>
             <p className="text-muted-foreground">+91 98765 43210</p>
-            <p className="text-muted-foreground">orders@sahyarice.in</p>
+            <p className="text-muted-foreground">orders@pureorganicrice.in</p>
           </div>
           <div>
             <p className="font-semibold mb-2">Delivery</p>
