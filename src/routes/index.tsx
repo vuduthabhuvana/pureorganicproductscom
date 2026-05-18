@@ -180,7 +180,7 @@ function Index() {
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-center gap-2 font-serif text-xl font-bold text-primary">
             <Wheat className="size-6" />
-            Sahya Heritage Rice
+            Pure Organic Rice Products
           </a>
           <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
             <a href="#rices" className="hover:text-primary transition">Our Rice</a>
