@@ -25,11 +25,11 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Sahya Heritage Rice — Navara, Bahu Rupi & Bangaru Kaddi" },
+      { title: "Pure Organic Rice Products — Navara, Bahu Rupi & Bangaru Kaddi" },
       {
         name: "description",
         content:
-          "Buy traditional heritage rice direct from the farm. Navara, Bahu Rupi and Bangaru Kaddi rice with fixed prices, uses and delivery.",
+          "Buy traditional organic rice direct from the farm. Navara, Bahu Rupi and Bangaru Kaddi rice with fixed prices, uses and delivery.",
       },
     ],
   }),
