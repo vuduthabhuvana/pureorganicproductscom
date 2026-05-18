@@ -381,7 +381,7 @@ function Index() {
           </div>
 
           <DialogFooter>
-            <Button onClick={placeOrder} className="w-full">Place order · ₹{total}</Button>
+            <Button onClick={placeOrder} disabled={submitting} className="w-full">{submitting ? "Placing…" : `Place order · ₹${total}`}</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
