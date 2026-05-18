@@ -41,57 +41,90 @@ type Rice = {
   tagline: string;
   image: string;
   price: number; // per kg INR
-  uses: string;
-  when: string;
-  how: string;
-  who: string;
+  characteristics: string[];
+  health: string[];
+  uses: string[];
 };
 
 const RICES: Rice[] = [
   {
     id: "navara",
     name: "Navara Rice",
-    tagline: "The medicinal heritage grain",
+    tagline: "Traditional medicinal rice",
     image: navara,
     price: 220,
-    uses:
-      "Traditional Ayurvedic medicinal rice. Helps in nourishment, post-illness recovery, and is widely used in Navarakizhi therapy for joint and muscle health.",
-    when:
-      "Best during recovery from illness, post-pregnancy, monsoon and winter months, or as a strengthening diet for elders and children.",
-    how:
-      "Soak for 30 minutes. Cook with 1:3 rice-to-water ratio. Best as kanji (porridge) with a pinch of rock salt and cumin, or as plain steamed rice with ghee.",
-    who:
-      "Suitable for all ages — especially elders, children, new mothers, athletes and people on Ayurvedic diets.",
+    characteristics: [
+      "Traditional medicinal rice variety",
+      "Red or brown colored grains",
+      "Rich in nutrients and antioxidants",
+      "Suitable for organic farming",
+      "Short-duration crop",
+    ],
+    health: [
+      "Improves body strength",
+      "Supports immunity",
+      "Helps digestion",
+      "Good for recovery diets",
+      "Suitable for children and elderly people",
+    ],
+    uses: [
+      "Rice porridge",
+      "Traditional rice meals",
+      "Payasam",
+      "Ayurvedic medicines",
+      "Navara Kizhi therapy",
+    ],
   },
   {
     id: "bahurupi",
     name: "Bahu Rupi Rice",
-    tagline: "A landrace blend of many colours",
+    tagline: "Traditional indigenous seed",
     image: bahurupi,
     price: 180,
-    uses:
-      "A nutrient-dense multi-coloured heritage rice rich in fibre, antioxidants and minerals. Great for daily meals and immunity support.",
-    when:
-      "Everyday lunch and dinner — ideal for families switching from polished white rice to a healthier whole-grain option.",
-    how:
-      "Wash gently, soak for 20 minutes, cook 1:2.5 with water. Pairs beautifully with sambar, dal, rasam or vegetable curries.",
-    who:
-      "Suitable for diabetics (low GI), fitness-conscious adults and anyone wanting a wholesome daily staple.",
+    characteristics: [
+      "Traditional indigenous seed",
+      "Mostly organic cultivation",
+      "Strong aroma in some harvests",
+      "Nutritious compared to polished white rice",
+      "Adapted to hill and tribal regions",
+    ],
+    health: [
+      "Higher fiber",
+      "Better minerals",
+      "Natural cultivation",
+      "Less chemical usage",
+    ],
+    uses: [
+      "Daily rice meals",
+      "Ganji (rice porridge)",
+      "Traditional tribal foods",
+    ],
   },
   {
     id: "bangaru",
     name: "Bangaru Kaddi Rice",
-    tagline: "Golden, aromatic, festival-grade",
+    tagline: "Traditional local seed variety",
     image: bangaru,
     price: 260,
-    uses:
-      "A premium aromatic rice with long golden grains. Perfect for biryani, pulao, ghee rice, payasam and festive meals.",
-    when:
-      "Festivals, weddings, special occasions, Sunday biryanis — anytime you want a fragrant, fluffy plate.",
-    how:
-      "Rinse till water runs clear, soak 30 minutes, cook 1:2 with water. Each grain stays separate, fluffy and aromatic.",
-    who:
-      "Perfect for home cooks, caterers, restaurants and anyone who loves aromatic long-grain rice.",
+    characteristics: [
+      "Traditional local seed variety",
+      "Adapted to local climate conditions",
+      "Usually cultivated with fewer chemicals",
+      "Nutritious compared to polished white rice",
+      "Good aroma and taste in some harvests",
+    ],
+    health: [
+      "Contains more fiber in unpolished form",
+      "Better digestion support",
+      "Traditional healthy food source",
+      "Less processing compared to polished rice",
+    ],
+    uses: [
+      "Daily rice meals",
+      "Ganji (rice porridge)",
+      "Traditional dishes",
+      "Organic rice products",
+    ],
   },
 ];
 
