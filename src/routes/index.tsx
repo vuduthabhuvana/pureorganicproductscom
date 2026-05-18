@@ -112,9 +112,24 @@ function Index() {
   const update = (id: string, delta: number) =>
     setQty((q) => ({ ...q, [id]: Math.max(0, (q[id] ?? 0) + delta) }));
 
-  const placeOrder = () => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const placeOrder = async () => {
     if (!form.name || !form.phone || !form.address) {
       toast.error("Please fill all delivery details");
+      return;
+    }
+    setSubmitting(true);
+    const { error } = await supabase.from("orders").insert({
+      customer_name: form.name,
+      phone: form.phone,
+      address: form.address,
+      items: cart.map((c) => ({ id: c.id, name: c.name, price: c.price, qty: c.count })),
+      total_amount: total,
+    });
+    setSubmitting(false);
+    if (error) {
+      toast.error("Could not place order. Try again.");
       return;
     }
     toast.success("Order placed! We'll call you shortly to confirm.");
