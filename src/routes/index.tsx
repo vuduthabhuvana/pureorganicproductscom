@@ -385,7 +385,7 @@ function Index() {
           </div>
         </div>
         <p className="text-center text-xs text-muted-foreground mt-10">
-          © {new Date().getFullYear()} Sahya Heritage Rice. All rights reserved.
+          © {new Date().getFullYear()} Pure Organic Rice Products. All rights reserved.
         </p>
       </footer>
 
