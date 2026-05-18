@@ -354,9 +354,9 @@ function Index() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-serif text-4xl font-bold">Grown by our family, for yours.</h2>
           <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
-            For three generations we have farmed traditional rice varieties on the
+            We farm traditional rice varieties on the
             slopes of the Western Ghats. No pesticides, no polishing, no middlemen —
-            just rice the way it has always been grown, packed and shipped within
+            just pure organic rice the way it has always been grown, packed and shipped within
             48 hours of your order.
           </p>
         </div>
