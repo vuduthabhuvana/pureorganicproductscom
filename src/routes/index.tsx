@@ -15,6 +15,7 @@ import {
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import { Leaf, Wheat, ShoppingBag, Minus, Plus } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 import navara from "@/assets/navara.jpg";
 import bahurupi from "@/assets/bahurupi.jpg";
 import bangaru from "@/assets/bangarukaddi.jpg";
@@ -111,9 +112,24 @@ function Index() {
   const update = (id: string, delta: number) =>
     setQty((q) => ({ ...q, [id]: Math.max(0, (q[id] ?? 0) + delta) }));
 
-  const placeOrder = () => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const placeOrder = async () => {
     if (!form.name || !form.phone || !form.address) {
       toast.error("Please fill all delivery details");
+      return;
+    }
+    setSubmitting(true);
+    const { error } = await supabase.from("orders").insert({
+      customer_name: form.name,
+      phone: form.phone,
+      address: form.address,
+      items: cart.map((c) => ({ id: c.id, name: c.name, price: c.price, qty: c.count })),
+      total_amount: total,
+    });
+    setSubmitting(false);
+    if (error) {
+      toast.error("Could not place order. Try again.");
       return;
     }
     toast.success("Order placed! We'll call you shortly to confirm.");
@@ -365,7 +381,7 @@ function Index() {
           </div>
 
           <DialogFooter>
-            <Button onClick={placeOrder} className="w-full">Place order · ₹{total}</Button>
+            <Button onClick={placeOrder} disabled={submitting} className="w-full">{submitting ? "Placing…" : `Place order · ₹${total}`}</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
