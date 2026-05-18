@@ -213,7 +213,7 @@ function Index() {
             <Leaf className="size-4" /> Farm to Doorstep
           </p>
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            Heritage rice,<br />grown the old way.
+            Pure organic rice,<br />grown the old way.
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto">
             Three traditional varieties, naturally cultivated on our family farm.
