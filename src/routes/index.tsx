@@ -15,6 +15,7 @@ import {
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import { Leaf, Wheat, ShoppingBag, Minus, Plus } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 import navara from "@/assets/navara.jpg";
 import bahurupi from "@/assets/bahurupi.jpg";
 import bangaru from "@/assets/bangarukaddi.jpg";
